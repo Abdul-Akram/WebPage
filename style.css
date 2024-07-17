@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #0D1F2D;
+    padding: .5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    display: none;
+    color: white;
+}
+
+.searchbar input {
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.searchbar input:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    display: flex;
+    gap: 2rem;
+}
+
+ul a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+ul a:hover {
+    color: #ffa500;
+    text-decoration: underline;
+}
+
+li {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.LOGO img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.searchbar i {
+    padding: .5rem;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    background-color: #9a9750;
+    padding: .2rem .5rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.searchbar i:hover {
+    color: #ffa500;
+}
+
+.carousel img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.desc {
+    text-align: justify;
+    color: #333;
+    line-height: 1.6;
+}
+
+.box {
+    border: 2px solid #0D1F2D;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    color: #0D1F2D;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+.price {
+    display: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0D1F2D;
+    margin-top: 1rem;
+}
+
+.box:hover .price {
+    display: block;
+}
+
+@media only screen and (max-width: 780px) {
+    .LOGO {
+        display: none;
+    }
+    nav h1 {
+        display: block;
+        text-align: center;
+    }
+    .searchbar input {
+        padding: .3rem;
+    }
+    li {
+        font-size: 1rem;
+    }
+    nav {
+        flex-direction: column;
+    }
+    ul {
+        justify-content: center;
+    }
+    .searchbar {
+        margin: 10px auto;
+        width: fit-content;
+    }
+    .carousel img {
+        height: 300px;
+    }
+}
